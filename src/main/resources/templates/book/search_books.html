@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SEARCH BOOKS</title>
+</head>
+<body>
+    <form th:method="POST" th:action="@{/books/search}" th:object="${searchBooksDTO}">
+        <label for="startWith">Введите поисковый запрос: </label>
+        <input type="text" th:field="*{startWith}" id="startWith"/>
+        <br>
+        <input type="submit" value="Найти">
+    </form>
+</body>
+</html>
